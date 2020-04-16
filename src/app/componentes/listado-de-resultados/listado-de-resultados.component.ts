@@ -1,4 +1,3 @@
-
 import { Component, OnInit , Input, EventEmitter} from '@angular/core';
 
 @Component({
@@ -19,7 +18,7 @@ export class ListadoDeResultadosComponent implements OnInit {
   }
 
   ver() {
-    console.info(this.listado);
+    console.log(this.listado);
   }
 
 }
