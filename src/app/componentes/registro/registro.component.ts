@@ -19,4 +19,6 @@ export class RegistroComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Usar Localstorage
+
 }

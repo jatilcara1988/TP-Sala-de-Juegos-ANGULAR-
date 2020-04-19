@@ -17,19 +17,21 @@ export class JuegoAdivina extends Juego {
         return false;
       }
       */
-      return (this.numeroIngresado === this.numeroSecreto);
+      this.gano = (this.numeroIngresado === this.numeroSecreto);
+      return this.gano;
     }
 
     public generarNumero() {
       this.numeroSecreto = Math.floor((Math.random() * 100) + 1);
-      console.log('numero Secreto:' + this.numeroSecreto);
+      console.log('>>> Numero Secreto generado:' + this.numeroSecreto);
       this.gano = false;
     }
 
     public retornarAyuda() {
       if (this.numeroIngresado < this.numeroSecreto) {
         return 'Falta';
+      } else if (this.numeroIngresado > this.numeroSecreto) {
+        return 'Te pasate';
       }
-      return 'Te pasate';
     }
 }
