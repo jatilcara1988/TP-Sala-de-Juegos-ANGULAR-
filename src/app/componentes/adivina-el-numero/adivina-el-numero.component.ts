@@ -21,7 +21,7 @@ export class AdivinaElNumeroComponent implements OnInit {
     this.ocultarVerificar = false;
   }
   generarnumero() {
-    this.nuevoJuego.generarNumero();
+    this.nuevoJuego.iniciarJuego();
     this.contador = 0;
   }
   verificar() {
@@ -39,7 +39,7 @@ export class AdivinaElNumeroComponent implements OnInit {
           mensaje = 'No, intento fallido, animo';
           break;
         case 2:
-          mensaje = 'No,Te estaras Acercando???';
+          mensaje = 'No, te estaras acercando???';
           break;
         case 3:
           mensaje = 'No es, Yo crei que la tercera era la vencida.';
@@ -48,7 +48,7 @@ export class AdivinaElNumeroComponent implements OnInit {
           mensaje = `No era el ${this.nuevoJuego.numeroIngresado}`;
           break;
         case 5:
-          mensaje = ' intentos y nada.';
+          mensaje = `${this.contador} intentos y nada.`;
           break;
         case 6:
           mensaje = 'Afortunado en el amor';
