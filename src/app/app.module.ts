@@ -54,6 +54,8 @@ import { AgmCoreModule } from '@agm/core';
 import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
 import { SexoPipe } from './pipes/sexo.pipe';
 import { AppRoutingModule } from './app-routing.module';
+import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+import { PiedraPapelTijeraMasListadoComponent } from './componentes/piedra-papel-tijera-mas-listado/piedra-papel-tijera-mas-listado.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +81,9 @@ import { AppRoutingModule } from './app-routing.module';
     MapaDeGoogleComponent,
     JugadoresListadoComponent,
     InputJugadoresComponent,
-    SexoPipe
+    SexoPipe,
+    PiedraPapelTijeraComponent,
+    PiedraPapelTijeraMasListadoComponent
   ],
   imports: [
     BrowserModule,

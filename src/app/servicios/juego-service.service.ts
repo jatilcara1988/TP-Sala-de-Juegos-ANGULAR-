@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Juego } from '../clases/juego';
 import { JuegoAdivina } from '../clases/juego-adivina';
+import { JuegoAgilidad } from '../clases/juego-agilidad';
 import { MiHttpService } from './mi-http/mi-http.service';
 
 @Injectable()
@@ -47,7 +48,7 @@ export class JuegoServiceService {
 
     let promesa: Promise<Array<Juego>> = new Promise((resolve, reject) => {
       let miArray: Array<Juego> = new Array<Juego>();
-      miArray.push(new JuegoAdivina('JuegoPromesa 1', false,'promesa'));
+      miArray.push(new JuegoAdivina('JuegoPromesa 1', false, 'promesa'));
       miArray.push(new JuegoAdivina('PepePromesa', true));
       miArray.push(new JuegoAdivina('JuegoPromesa 3', false));
       miArray.push(new JuegoAdivina('JuegoPromesa 4', false));
