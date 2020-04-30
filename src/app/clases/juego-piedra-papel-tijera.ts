@@ -40,4 +40,12 @@ export class JuegoPiedraPapelTijera extends Juego {
         return this.gano;
     }
 
+    public showCOMSelection(comSelection: string): boolean {
+        return this.comSelection === comSelection;
+    }
+
+    public showPlayerSelection(selection: string): boolean {
+        return this.playerSelection === selection;
+    }
+
 }
