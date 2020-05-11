@@ -12,10 +12,10 @@ import { HttpModule } from '@angular/http';
 // agrego las clases para utilizar ruteo
 import { RouterModule, Routes } from '@angular/router';
 
-import { MiHttpService } from './servicios/mi-http/mi-http.service'; 
-import { PaisesService } from './servicios/paises.service'; 
+import { MiHttpService } from './servicios/mi-http/mi-http.service';
+import { PaisesService } from './servicios/paises.service';
 
-import { JugadoresService } from './servicios/jugadores.service'; 
+import { JugadoresService } from './servicios/jugadores.service';
 import { ArchivosJugadoresService } from './servicios/archivos-jugadores.service';
 import { ErrorComponent } from './componentes/error/error.component';
 import { PrincipalComponent } from './componentes/principal/principal.component';
@@ -49,13 +49,18 @@ import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
 import { AnagramaComponent } from './componentes/anagrama/anagrama.component';
 import { ListadoDePaisesComponent } from './componentes/listado-de-paises/listado-de-paises.component';
-import { MapaDeGoogleComponent } from './componentes/mapa-de-google/mapa-de-google.component'
+import { MapaDeGoogleComponent } from './componentes/mapa-de-google/mapa-de-google.component';
 import { AgmCoreModule } from '@agm/core';
 import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
 import { SexoPipe } from './pipes/sexo.pipe';
-import { AppRoutingModule } from './app-routing.module';
+
 import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
 import { PiedraPapelTijeraMasListadoComponent } from './componentes/piedra-papel-tijera-mas-listado/piedra-papel-tijera-mas-listado.component';
+import { TaTeTiComponent } from './componentes/ta-te-ti/ta-te-ti.component';
+import { TaTeTiMasListadoComponent } from './componentes/ta-te-ti-mas-listado/ta-te-ti-mas-listado.component';
+import { AnagramaMasListadoComponent } from './componentes/anagrama-mas-listado/anagrama-mas-listado.component';
+import { BuscaminasComponent } from './componentes/buscaminas/buscaminas.component';
+import { BuscaminasMasListadoComponent } from './componentes/buscaminas-mas-listado/buscaminas-mas-listado.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +88,12 @@ import { PiedraPapelTijeraMasListadoComponent } from './componentes/piedra-papel
     InputJugadoresComponent,
     SexoPipe,
     PiedraPapelTijeraComponent,
-    PiedraPapelTijeraMasListadoComponent
+    PiedraPapelTijeraMasListadoComponent,
+    TaTeTiComponent,
+    TaTeTiMasListadoComponent,
+    AnagramaMasListadoComponent,
+    BuscaminasComponent,
+    BuscaminasMasListadoComponent
   ],
   imports: [
     BrowserModule,
@@ -92,8 +102,7 @@ import { PiedraPapelTijeraMasListadoComponent } from './componentes/piedra-papel
     HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
-    }),
-    AppRoutingModule
+    })
     // NgbModule.forRoot(MiRuteo),
     // importo el ruteo
     // RouterModule.forRoot(MiRuteo)

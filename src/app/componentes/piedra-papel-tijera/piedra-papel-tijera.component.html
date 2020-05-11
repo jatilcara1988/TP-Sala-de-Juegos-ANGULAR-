@@ -6,40 +6,40 @@
 </div>
 <h2></h2>
 <form name="juego">
-    <h1 style="text-align:center"><b>Elija para comenzar a jugar</b></h1>
     <div class="container">
-        <div class="card">
-            <img class="img-thumbnail" src="./assets/imagenes/rps-rock.png" alt="Piedra" style="width:100%">
+        <div class="player-selection" *ngIf="!showResults">
+            <h1 style="text-align:center"><b>Elija para comenzar a jugar</b></h1>
+            <div class="card">
+                <button class="button" (click)="jugar('rock')">
+                    <img class="img-thumbnail" src="./assets/imagenes/rps-rock.png" alt="Piedra" style="width:100%">
+                </button>
+            </div>
+            <div class="card">
+                <button class="button" (click)="jugar('paper')">
+                    <img class="img-thumbnail" src="./assets/imagenes/rps-paper.png" alt="Papel" style="width:100%">
+                </button>
+            </div>
+            <div class="card">
+                <button class="button" (click)="jugar('scissors')">
+                    <img class="img-thumbnail" src="./assets/imagenes/rps-scissors.png" alt="Tijera" style="width:100%">
+                </button>
+            </div>
         </div>
-        <div class="card">
-            <img *ngIf="showCOM" class="img-thumbnail" src="./assets/imagenes/rps-paper.png" alt="Papel" style="width:100%">
-        </div>
-        <div class="card">
-            <img *ngIf="showCOM" class="img-thumbnail" src="./assets/imagenes/rps-scissors.png" alt="Tijera" style="width:100%">
+        <div class="result-container" *ngIf="showResults">
+            <h1>Resultado</h1>
+            <div class="game-over">
+                <div class="card">
+
+                    <img class="img-thumbnail" src="./assets/imagenes/rps-{{newGame.playerSelection}}.png" style="width:100%">
+                </div>
+                <div class="card">
+                    <img class="img-thumbnail" src="./assets/imagenes/rps-{{newGame.comSelection}}.png" style="width:100%">
+                </div>
+                <div style="text-align: center; vertical-align: middle;">
+                    <h1>{{newGame.messageResult}}</h1>
+                </div>
+            </div>
+            <button class="button" (click)="iniciarJuego()">Iniciar</button>
         </div>
     </div>
-
-    <h1 style="text-align: center;"><b>VS. {{player.name}}</b></h1>
-
-    <div class="container">
-        <div class="card">
-            <button *ngIf="newGame.playerSelection == ''" class="button" (click)="jugar('rock')">
-                <img class="img-thumbnail" src="./assets/imagenes/rps-rock.png" alt="Piedra" style="width:100%">
-            </button>
-            <img *ngIf="newGame.playerSelection != '' && !newGame.gano" class="img-thumbnail" src="./assets/imagenes/error-bg.png" alt="Error" style="width:100%">
-        </div>
-        <div class="card">
-            <button *ngIf="newGame.playerSelection == ''" class="button" (click)="jugar('paper')">
-                <img class="img-thumbnail" src="./assets/imagenes/rps-paper.png" alt="Papel" style="width:100%">
-            </button>
-            <img *ngIf="newGame.playerSelection != '' && !newGame.gano" class="img-thumbnail" src="./assets/imagenes/error-bg.png" alt="Error" style="width:100%">
-        </div>
-        <div class="card">
-            <button *ngIf="newGame.playerSelection === ''" class="button" (click)="jugar('scissors')">
-                <img class="img-thumbnail" src="./assets/imagenes/rps-scissors.png" alt="Tijera" style="width:100%">
-            </button>
-            <img *ngIf="newGame.playerSelection != '' && !newGame.gano" class="img-thumbnail" src="./assets/imagenes/error-bg.png" alt="Error" style="width:100%">
-        </div>
-    </div>
-    <button class="button" (click)="iniciarJuego()">Iniciar</button>
 </form>

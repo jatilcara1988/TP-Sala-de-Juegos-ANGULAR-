@@ -22,6 +22,13 @@ import { ListadoDePaisesComponent } from '../componentes/listado-de-paises/lista
 import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-google.component'
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
 import { PiedraPapelTijeraComponent } from '../componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+import { PiedraPapelTijeraMasListadoComponent } from '../componentes/piedra-papel-tijera-mas-listado/piedra-papel-tijera-mas-listado.component';
+import { TaTeTiComponent } from '../componentes/ta-te-ti/ta-te-ti.component';
+import { TaTeTiMasListadoComponent } from '../componentes/ta-te-ti-mas-listado/ta-te-ti-mas-listado.component';
+import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
+import { AnagramaMasListadoComponent } from '../componentes/anagrama-mas-listado/anagrama-mas-listado.component';
+import { BuscaminasComponent } from '../componentes/buscaminas/buscaminas.component';
+import { BuscaminasMasListadoComponent } from '../componentes/buscaminas-mas-listado/buscaminas-mas-listado.component';
 
 
 // declaro donde quiero que se dirija
@@ -38,13 +45,21 @@ const MiRuteo = [
 
 { path: 'Juegos' ,
 component: JuegosComponent ,
-children:
-     [{path: '' , component: MenuCardComponent},
-      {path: 'Adivina' , component: AdivinaElNumeroComponent},
-      {path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
-      {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
-      {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
-      {path: 'PiedraPapelTijeras', component: PiedraPapelTijeraComponent }]
+children: [
+      { path: '', component: MenuCardComponent },
+      { path: 'Adivina', component: AdivinaElNumeroComponent },
+      { path: 'AdivinaMasListado', component: AdivinaMasListadoComponent },
+      { path: 'Agilidad', component: AgilidadAritmeticaComponent },
+      { path: 'AgilidadaMasListado', component: AgilidadMasListadoComponent },
+      { path: 'PiedraPapelTijera', component: PiedraPapelTijeraComponent },
+      { path: 'PiedraPapelTijeraMasListado', component: PiedraPapelTijeraMasListadoComponent },
+      { path: 'TaTeTi', component: TaTeTiComponent },
+      { path: 'TaTeTiMasListado', component: TaTeTiMasListadoComponent },
+      { path: 'Anagrama', component: AnagramaComponent },
+      { path: 'AnagramaMasListado', component: AnagramaMasListadoComponent },
+      { path: 'Buscaminas', component: BuscaminasComponent },
+      { path: 'BuscaminasMasListado', component: BuscaminasMasListadoComponent }
+    ]
 },
 {path: '**' , component: ErrorComponent},
 {path: 'error' , component: ErrorComponent}];
